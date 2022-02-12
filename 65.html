@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.box1{
+			position: absolute;
+			height: 144px;
+			width: 256px;
+			background-image: url(sf.jpg) ;
+			background-size:  100% 100%;
+			margin-left: 256px;
+		}
+		.box2{
+			position: absolute;
+			height: 144px;
+			width: 256px;
+			background-image: url(pudge.png) ;
+			background-size:  100% 100%;
+			margin-left: 576px;
+		}
+		.box3{
+			position: absolute;
+			height: 144px;
+			width: 256px;
+			background-image: url(am.png) ;
+			background-size:  100% 100%;
+			margin-left: 896px;
+		}
+		.box4{
+			position: absolute;
+			height: 144px;
+			width: 256px;
+			background-image: url(pl.png) ;
+			background-size:  100% 100%;
+			margin-left: 256px;
+			margin-top: 256px;
+		}
+		.box5{
+			position: absolute;
+			height: 144px;
+			width: 256px;
+			background-image: url(clinkz.png) ;
+			background-size:  100% 100%;
+			margin-left: 576px;
+			margin-top: 256px;
+		}
+		.box6{
+			position: absolute;
+			height: 144px;
+			width: 256px;
+			background-image: url(dr.jpg) ;
+			background-size:  100% 100%;
+			margin-left: 896px;
+			margin-top: 256px;
+		}
+	</style>
+</head>
+<body>
+<h1>Осталось попыток</h1>
+<h1 class="pop">3</h1>
+<button class="btn">Перемещать</button>
+
+<h1>Найди Shadow Fiend</h1>
+
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+<div class="box4"></div>
+<div class="box5"></div>
+<div class="box6"></div>
+
+<script type="text/javascript">
+	let attemps = 3;
+	document.querySelector('.btn').onclick = function() {
+		document.querySelector('.box1').style.background = "black"
+		document.querySelector('.box2').style.background = "black"
+		document.querySelector('.box3').style.background = "black"
+		document.querySelector('.box4').style.background = "black"
+		document.querySelector('.box5').style.background = "black"
+		document.querySelector('.box6').style.background = "black"
+		document.querySelector('.box1').style.marginLeft = "576px"
+		document.querySelector('.box1').style.marginTop = "256px"
+		document.querySelector('.box2').style.marginLeft = "896px"
+		document.querySelector('.box2').style.marginTop = "256px"
+		document.querySelector('.box3').style.marginLeft = "256px"
+		document.querySelector('.box3').style.marginTop = "256px"
+		document.querySelector('.box4').style.marginLeft = "896px"
+		document.querySelector('.box4').style.marginTop = "0px"
+		document.querySelector('.box5').style.marginLeft = "256px"
+		document.querySelector('.box5').style.marginTop = "0px"
+		document.querySelector('.box6').style.marginLeft = "576px"
+		document.querySelector('.box6').style.marginTop = "0px"
+		document.querySelector('.box1').style.transition = "0.3s"
+		document.querySelector('.box2').style.transition = "0.3s"
+		document.querySelector('.box3').style.transition = "0.3s"
+		document.querySelector('.box4').style.transition = "0.3s"
+		document.querySelector('.box5').style.transition = "0.3s"
+		document.querySelector('.box6').style.transition = "0.3s"
+	}
+
+
+	document.querySelector('.box1').onclick = function() {
+		attemps = attemps;
+		document.querySelector('.box1').style.backgroundImage = "url(sf.jpg)"
+		document.querySelector('.box2').style.display = "none"
+		document.querySelector('.box3').style.display = "none"
+		document.querySelector('.box4').style.display = "none"
+		document.querySelector('.box5').style.display = "none"
+		document.querySelector('.box6').style.display = "none"
+		alert('Вау ты нашел Shadow fiend')
+	}
+
+
+	document.querySelector('.box2').onclick = function() {
+		attemps = attemps - 1;
+		document.querySelector('.pop').innerHTML = attemps
+		alert('у тебя осталось ' + attemps + ' попытки')
+		document.querySelector('.box2').style.backgroundImage = "url(pudge.png)"
+		if(attemps==0){
+			alert('you lose')
+			document.querySelector('.box1').style.display = "none"
+			document.querySelector('.box2').style.display = "none"
+			document.querySelector('.box3').style.display = "none"
+			document.querySelector('.box4').style.display = "none"
+			document.querySelector('.box5').style.display = "none"
+			document.querySelector('.box6').style.display = "none"
+		}
+	}
+	document.querySelector('.box3').onclick = function() {
+		attemps = attemps - 1;
+		document.querySelector('.pop').innerHTML = attemps
+		alert('у тебя осталось ' + attemps + ' попытки')
+		document.querySelector('.box3').style.backgroundImage = "url(am.png)"
+		if(attemps==0){
+			alert('you lose')
+			document.querySelector('.box1').style.display = "none"
+			document.querySelector('.box2').style.display = "none"
+			document.querySelector('.box3').style.display = "none"
+			document.querySelector('.box4').style.display = "none"
+			document.querySelector('.box5').style.display = "none"
+			document.querySelector('.box6').style.display = "none"
+		}
+	}
+	document.querySelector('.box4').onclick = function() {
+		attemps = attemps - 1;
+		document.querySelector('.pop').innerHTML = attemps
+		alert('у тебя осталось ' + attemps + ' попытки')
+		document.querySelector('.box4').style.backgroundImage = "url(pl.png)"
+		if(attemps==0){
+			alert('you lose')
+			document.querySelector('.box1').style.display = "none"
+			document.querySelector('.box2').style.display = "none"
+			document.querySelector('.box3').style.display = "none"
+			document.querySelector('.box4').style.display = "none"
+			document.querySelector('.box5').style.display = "none"
+			document.querySelector('.box6').style.display = "none"
+		}
+	}
+	document.querySelector('.box5').onclick = function() {
+		attemps = attemps - 1;
+		document.querySelector('.pop').innerHTML = attemps
+		alert('у тебя осталось ' + attemps + ' попытки')
+		document.querySelector('.box5').style.backgroundImage = "url(clinkz.png)"
+		if(attemps==0){
+			alert('you lose')
+			document.querySelector('.box1').style.display = "none"
+			document.querySelector('.box2').style.display = "none"
+			document.querySelector('.box3').style.display = "none"
+			document.querySelector('.box4').style.display = "none"
+			document.querySelector('.box5').style.display = "none"
+			document.querySelector('.box6').style.display = "none"
+		}
+	}
+	document.querySelector('.box6').onclick = function() {
+		attemps = attemps - 1;
+		document.querySelector('.pop').innerHTML = attemps
+		alert('у тебя осталось ' + attemps + ' попытки')
+		document.querySelector('.box6').style.backgroundImage = "url(dr.jpg)"
+		if(attemps==0){
+			alert('you lose')
+			document.querySelector('.box1').style.display = "none"
+			document.querySelector('.box2').style.display = "none"
+			document.querySelector('.box3').style.display = "none"
+			document.querySelector('.box4').style.display = "none"
+			document.querySelector('.box5').style.display = "none"
+			document.querySelector('.box6').style.display = "none"
+		}
+	}
+</script>
+</body>
+</html>
